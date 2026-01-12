@@ -10,7 +10,8 @@ import { httpRequestChannel } from "@/inngest/channels/http-request";
 import { fetchOpenAiRealtimeToken } from "./actions";
 
 type OpenAiNodeData = {
-  variableName?: string
+  variableName?: string;
+  credentialId?: string;
   systemPrompt?:string;
   userPrompt?:string;
 };

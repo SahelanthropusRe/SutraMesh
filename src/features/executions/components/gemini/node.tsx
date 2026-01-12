@@ -10,7 +10,8 @@ import { httpRequestChannel } from "@/inngest/channels/http-request";
 import { fetchGeminiRealtimeToken } from "./actions";
 
 type GeminiNodeData = {
-  variableName?: string
+  variableName?: string;
+  credentialId?: string;
   systemPrompt?:string;
   userPrompt?:string;
 };

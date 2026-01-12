@@ -10,7 +10,8 @@ import { httpRequestChannel } from "@/inngest/channels/http-request";
 import { fetchAnthropicRealtimeToken } from "./actions";
 
 type AnthropicNodeData = {
-  variableName?: string
+  variableName?: string;
+  credentialId?: string;
   systemPrompt?:string;
   userPrompt?:string;
 };
