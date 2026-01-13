@@ -9,6 +9,7 @@ export interface NodeExecutorParams<
   TData = Record<string, unknown>> {
   data: TData;
   nodeId: string;
+  userId: string;
   context: WorkflowContext;
   step: StepTools;
   publish: Realtime.PublishFn;
