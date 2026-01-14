@@ -6,6 +6,7 @@ import { anthropicChannel } from "@/inngest/channels/anthropic";
 import {createAnthropic} from "@ai-sdk/anthropic";
 import {generateText} from "ai";
 import prisma from "@/lib/db";
+import { decrypt } from "@/lib/encryption";
 
 Handlebars.registerHelper("json", (context) =>{
   const jsonString=JSON.stringify(context,null,2);
@@ -100,7 +101,7 @@ if (!credential) {
 }
 
 const anthropic = createAnthropic({
-  apiKey: credential.value,
+  apiKey: decrypt(credential.value),
 });
 
 try {
